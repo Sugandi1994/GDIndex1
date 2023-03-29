@@ -22,8 +22,8 @@ app.post("/getcode", async (req, res) => {
         .post("https://www.googleapis.com/oauth2/v4/token", {
             urlencoded: {
                 code: p.auth_code,
-                client_id: "************.apps.googleusercontent.com",
-                client_secret: "**************",
+                client_id: "858475057672-vrvnlbq63rlbspa3921rk1ijnmdelsc5.apps.googleusercontent.com",
+                client_secret: "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",
                 redirect_uri: "https://gen.my-program.workers.dev/",
                 grant_type: "authorization_code"
             }
@@ -39,7 +39,7 @@ app.post("/getcode", async (req, res) => {
     }
     let code = await xf
         .get(
-            "https://raw.githubusercontent.com/maple3142/GDIndex/master/worker/dist/worker.js"
+            "https://raw.githubusercontent.com/Sugandi1994/GDIndex1/master/worker/dist/worker.js"
         )
         .text();
     code = replace(code, "refresh_token", r.refresh_token);
